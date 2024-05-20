@@ -1,0 +1,118 @@
+1.What is Spring boot.
+-->Spring boot is a java framework that makes it easier to create and run the java Applications.
+-->It simplifies the configuration and setup process, allowing developers to focus more on writing code for their applications.
+-->Spring boot, a module of a spring framework, that facilities the Rapid Application Development(RAD) capabilities.
+-->Spring Boot helps developers as follows:-
+     a)Configuration
+     b)Dependencies can be easily downloaded using Pom.xml file.(Dependency Management).
+     c)Embedded Server(Ex:- Tomcat Server).
+
+2.Why Spring Boot over Spring.
+-->Spring Boot provide many advantages over normal Spring Framework.
+   a)Easy to use-Remove boilerplate code.
+   b)Production Ready Applications-Metrix, Health Check and many features are designed for production ready application.
+   c)Rapid Development: auto-configuration enable developers to develop the apps.
+   d)Provide Dependency Management.
+   e)Auto-Configuration
+   f)Embedded Server(Ex:- Tomcat Server).
+
+3.Working of Spring Boot.
+-->spring boot starts by scanning the starter dependencies in pom.xml and then it will download and auto-configure the module as   you included in pom.xml.
+
+4.How spring boot starts.
+-->Starts with main() method in the main class and run() method is called in spring Application and it will create application context and initialize it.
+-->Once Application context is initialized, then run() method starts the embedded web server.
+
+5.Top Spring boot Annotations.
+-->@SpringBootApplication= @Configuration + @EnableAutoConfiguration + @ComponentScan(core spring boot configurations).
+-->@ComponentScan(Package name under which bean classes are present)=It scans the all the classes under the package and creates  the beans of all classes. It is placed in main  class.
+-->@Component=It is used to mark the class as a spring bean for the spring container.
+-->@Autowired=It is used to automatically inject dependencies into a spring-managed bean.
+-->@Service=It is used to mark class as a service class in which that class contains the business logic.
+-->@Controller=For accepting the requests from web.
+-->@RESTController=mark class as a REST controller. It is a specialized version of the @Controller that includes the   			           @ResponseBody annotation by default.
+-->@RequestMapping=used to map specific URL to method. Used on class as well as method level.
+-->@Repository=mark class as DAO. Mostly used on class that has database persistent logic.
+-->@ResponseBody=It sends the data to the client(browser) directly in the form of list, map and Json data etc.
+ 
+6.What are the spring boot Starters.
+-->Starters are a collection of pre-configured dependencies that make it easier to develop particular kinds of applications.
+-->Ex:-spring boot starter web,spring boot starter data jpa,spring boot starter security.
+-->Starters includes dependencies, version controls and configuration needed for the particular application to make it functional.	
+
+7.what are the key dependencies of spring boot.
+-->Spring-boot-starter-parent.
+-->Spring-boot-maven-plugin
+-->spring-boot-starter-test
+-->spring-boot-starter-security
+-->spring-boot-starter-actuator(matrix, health-check etc.)
+-->spring-boot-starter-web
+
+8.what is Spring-boot-starter-parent.
+-->It has default configuration for spring based applications such as dependency management features for version control of common dependencies.
+-->provide the default compiler level as java 1.8 and UTF-8 source encoding.
+-->provides default configuration for Maven plugins such as maven-surefire-plugin ,maven-jar-plugin and maven-failsafe plugin.
+
+9.Can we use only spring boot dependency feature and configure maven plugin manually.
+-->Yes.
+-->we don't inherit from the spring-boot-starter-parent pom.
+-->Include the spring-boot-dependencies dependency inside the dependency management section as an import scope.
+
+10.what is the spring-boot CLI and what are benefits.
+-->Spring init -d web. This command helps to create project using cli commands.
+
+11.what is thymeleaf.
+-->It is a java based server side templating engine used in java-applications for rendering the dynamic web pages.
+
+12.What is the IOC.
+-->IOC is a inversion of control that means creating of the object using new keyword is controlled by IOC container that is called IOC.
+
+13.What is the spring Bean lifecycle.
+-->Bean is a simple plain java Object.
+-->Spring Bean lifecycle is managed by IOC Container.
+-->Step1:-Container gets started.
+-->Step2:-Container creates the object of the beans as per the request.
+-->Step3:-Dependencies is created.
+-->Step4:-Dependencies is Injected.
+-->Step5:-Destroyed when container is closed.
+-->@PostConstruct(used on the method that initializes after Dependency Injection),@PreDestory(for destroying the bean.)
+-->By using the java interfaces such as IntiliaseBean and Disposable Bean for bean creation and Bean destroy.
+
+14.what is a Beanfactory,have you used XMLBeanFactory.
+-->This is a root interface for accessing a Spring Bean Container.
+-->It is a actual container that instantizes, configuration and manages a number of Beans.
+
+15.What is difference between Beanfactory and XMLBeanFactory.
+
+
+16.Difference between the setter and constructor injection in spring.
+-->Constructor Injection:-It is important to remember the type and order of constructor parameters.
+                          It is used for mandatory Dependencies and setter is optional.
+
+17.What are the different modules used in spring.
+-->7 core modules.
+a)The core container modules.
+b)Application context modules
+c)AOP module
+d)JDBC Abstraction and DAO module
+e)ORM Module
+f)Web Module
+g)Test
+
+18.What is the difference btw @inject and @Autowired.
+19.what is the difference btw @Bean and @Component.
+
+20.what is autowiring and what are the modes of autowiring.
+-->Injecting the beans automatically.
+-->modes are-- no,byName,byType,constructor.
+
+21.What is the different types of Bean scope.
+-->Singleton:-The bean instance is created only once and same instance will be returned by the IOC Container. It is default Scope.
+-->Prototype:-The bean instance will be created each time when requested.
+-->Request:-The bean instance will be created as per the HTTP request.
+-->Session:-The bean instance will be created as per the HTTP session.
+
+22.Top Annotations of JPA Annotations.
+-->
+
+
